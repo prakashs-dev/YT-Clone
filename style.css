@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+body{
+    position: relative;
+    background: #121212;
+    color: white;
+    font-family: 'roboto', sans-serif;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #212121;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+    cursor: pointer;
+}
+
+/* .toggle-btn{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+} */
+
+.toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.toggle-btn span:nth-child(1){
+    top: 0;
+}
+
+.toggle-btn span:nth-child(3){
+    top: 100%;
+}
+
+.logo{
+    height: 20px;
+    margin: 0px 30px ;
+}
+
+.search-box{
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    margin-left: 20%;
+}
+
+.search-bar{
+    width: 85%;
+    height: 100%;
+    color: white;
+    background-color: #121212;
+    padding: 0 20px;
+    font-size: 16px;
+    border: none;
+}
+
+.material-symbols-outlined{
+    color: white;
+}
+.search-btn{
+    width: 12%;
+    height: 100%;
+    background: #303030;
+    border: none;
+    padding: 5px 0;
+    border-left: none;
+    cursor: pointer;
+}
+
+.mic{
+    width: 12%;
+    height: 100%;
+    border-radius: 40px;
+    margin: 5px 0px 0px 7px;
+}
+
+.user-options{
+    height: 40px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.user-options .icon{
+    height: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.user-dp{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* side-bar */
+
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 250px;
+    width: 150px;
+    height: calc(100vh - 60px);
+    background: #212121;
+    padding-right: 10px;
+}
+
+.links{
+    color: white;
+    display: block;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    text-decoration: none;
+    gap: 20px;
+}
+
+
+.links:hover,
+.links.active{
+    background: #303030;
+}
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid #303030;
+    margin: 20px 0;
+}
+
+/* filter */
+
+.filters{
+    position: fixed;
+    left: 250px;
+    top: 60px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background-color:#212121;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter-options{
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    background-color: #303030;
+    border: 0.5px solid #aaaaaa;
+    text-transform: capitalize;
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-options.active{
+   background-color : #fff;
+    color: #242424;
+}
+
+/* video */
+
+.video-container{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 15px;
+    overflow-x: hidden;
+}
+
+.video{
+    min-height: 250px;
+    height: auto;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.content{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.title{
+    font-size: .9rem;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.channel-name{
+    font-size: 14px;
+    margin: 10px 0;
+    color: #979797;
+}
